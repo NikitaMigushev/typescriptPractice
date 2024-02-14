@@ -1,15 +1,14 @@
-type Combinable = number | string;
-
-
-function combine(n1: Combinable, n2: Combinable, resultConversion: 'as-number' | 'as-text') {
-    let result
-    if (typeof n1 === 'number' && typeof n2 === 'number' || resultConversion === 'as-number') {
-        result = +n1 + +n2;
-    } else {
-        result = n1.toString() + n2.toString()
-    }
-    return result;
+function add(n1: number, n2: number) {
+    return n1 + n2;
 }
 
-const combineNames = combine('A', 'B', 'as-text')
-console.log(combineNames);
+function printResult(num: number): void {
+    console.log('Result: ' + num);
+}
+
+printResult(add(5, 7));
+
+let combineValues: (a: number, b: number) => number;
+
+combineValues = add;
+

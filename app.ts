@@ -1,14 +1,14 @@
-function add(n1: number, n2: number) {
-    return n1 + n2;
+type Admin = {
+    name: string;
+    privileges: string[];
+};
+
+type Employee = {
+    name: string;
+    startDate: Date;
 }
 
-function printResult(num: number): void {
-    console.log('Result: ' + num);
-}
+type ElevatedEmployee = Admin & Employee;
 
-printResult(add(5, 7));
 
-let combineValues: (a: number, b: number) => number;
-
-combineValues = add;
 
